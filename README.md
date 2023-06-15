@@ -1,0 +1,1 @@
+Starting C learning journey

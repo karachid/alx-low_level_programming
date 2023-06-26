@@ -2,7 +2,7 @@
 
 /**
  * puts_half - prints the second half of a string
- * @s : string to be used for printing
+ * @str : string to be used for printing
  * Return: void (NOTHING)
  */
 
@@ -18,7 +18,7 @@ void puts_half(char *str)
 		c = c / 2;
 	else
 		c = (c - 1) / 2;
-	while(str[c] != '\0')
+	while (str[c] != '\0')
 	{
 		_putchar(str[c++]);
 	}

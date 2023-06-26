@@ -1,4 +1,4 @@
-#include<main.h>
+#include"main.h"
 
 /**
  * reset_to_98 - resets the param to 98

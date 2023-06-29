@@ -6,11 +6,23 @@
  * Return: output encoded string
  */
 
-char *rot13(char *c)
+char *rot13(char *s)
 {
-	if ((*c >= 'a' && *c <= 'm') || (*c >= 'A' && *c <= 'M'))
-		*c += 13;
-	else if ((*c >= 'n' && *c <= 'z') || (*c >= 'N' && *c <= 'Z'))
-		*c -= 13;
-	return (c);
+	int i1 = 0, i2 = 0;
+	char letter1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char letter2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	while (*(s + i1) != 0)
+	{
+		for (i2 = 0; i2 <= 52; i2++)
+		{
+			if (*(s + i1) == letter1[i2])
+			{
+				*(s + i1) = letter2[i2];
+				break;
+			}
+		}
+				i1++;
+	}
+		return (s);
 }

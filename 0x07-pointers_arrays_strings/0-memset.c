@@ -2,9 +2,9 @@
 
 /**
  * _memset - sets n bytes of s by b
- * @s : pointer to the string
- * @b : byte to be set
- * @n : represents how many bytes should be set
+ * @s: pointer to the string
+ * @b: byte to be set
+ * @n: represents how many bytes should be set
  * Return: pointer to the string
  */
 

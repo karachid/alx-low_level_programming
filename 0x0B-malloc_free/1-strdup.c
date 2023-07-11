@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strdup - returns a pointer to a newly allocated space in memory
+ * _strdup - returns a pointer to a newly allocated space in memory
  * @str: string input to duplicate
  * Return: pointer to the array or NULL
  */
@@ -15,10 +15,10 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	while(str[size] != '\0')
+	while (str[size] != '\0')
 		size++;
 
-	s = (char *)malloc(sizeof(char) * size);
+	s = (char *)malloc((sizeof(char) * size) + 1);
 
 	if (s == NULL)
 		return (NULL);

@@ -1,1 +1,1 @@
-Starting C learning journey
+this is bit manipulation folder

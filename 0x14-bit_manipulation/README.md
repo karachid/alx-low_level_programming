@@ -1,1 +1,1 @@
-bit manipulation project
+Starting C learning journey

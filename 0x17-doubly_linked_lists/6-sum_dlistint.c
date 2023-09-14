@@ -7,12 +7,13 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
+	dlistint_t *c = head;
 	int s = 0;
 
-	while (head)
+	while (c)
 	{
-		head = head->next;
-		s += head->next;
+		c = c->next;
+		s = s + c->n;
 	}
 	return (s);
 }

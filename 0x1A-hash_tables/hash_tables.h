@@ -32,10 +32,8 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
-
-
 /**
- * struct sorted_hash_node_s - Node of a sorted hash table
+ * struct shash_node_s - Node of a sorted hash table
  * @key: The key, string
  * The key is unique in the HashTable
  * @value: The value corresponding to a key
@@ -43,17 +41,17 @@ typedef struct hash_table_s
  * @sprev: A pointer to the previous element of the sorted linked list
  * @snext: A pointer to the next element of the sorted linked list
  */
-typedef struct sorted_hash_node_s
+typedef struct shash_node_s
 {
 	char *key;
 	char *value;
-	struct sorted_hash_node_s *next;
-	struct sorted_hash_node_s *sprev;
-	struct sorted_hash_node_s *snext;
-} sorted_hash_node_t;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
+} shash_node_t;
 
 /**
- * struct sorted_hash_table_s - Sorted hash table data structure
+ * struct shash_table_s - Sorted Hash Table
  * @size: The size of the array
  * @array: An array of size @size
  * Each cell of this array is a pointer to the first node of a linked list,
@@ -61,15 +59,13 @@ typedef struct sorted_hash_node_s
  * @shead: A pointer to the first element of the sorted linked list
  * @stail: A pointer to the last element of the sorted linked list
  */
-typedef struct sorted_hash_table_s
+typedef struct shash_table_s
 {
 	unsigned long int size;
-	sorted_hash_node_t **array;
-	sorted_hash_node_t *shead;
-	sorted_hash_node_t *stail;
-} sorted_hash_table_t;
-
-
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
+} shash_table_t;
 
 
 hash_table_t *hash_table_create(unsigned long int size);
